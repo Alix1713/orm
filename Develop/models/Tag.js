@@ -13,10 +13,10 @@ Tag.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // change: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false,
-    // },
+    tag_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
@@ -28,3 +28,13 @@ Tag.init(
 );
 
 module.exports = Tag;
+
+// {
+//   tag_name: 'rock music',
+//   tag_name: 'pop music',
+//   tag_name: 'blue',
+//   tag_name: 'red',
+//   tag_name: 'green',
+//   tag_name: 'white',
+//   tag_name: 'gold',
+//   tag_name: 'pop culture',

@@ -30,3 +30,8 @@ ProductTag.init(
 );
 
 module.exports = ProductTag;
+
+// {
+//   product_id: 1,
+//   tag_id: 6,
+// },
