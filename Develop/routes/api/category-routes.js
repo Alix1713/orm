@@ -43,10 +43,15 @@ router.post('/', async (req, res) => {
   }
 });
 
-//router.put('/:id', (req, res) => {
-//   // update a category by its `id` value
-// });
-
+// update a category by its `id` value
+router.put('/:id', (req, res) => {
+  try {
+    const categoryData = await Category.create(req.body.id);
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 // delete a category by its `id` value
 router.delete('/:id', async (req, res) => {
   try {
