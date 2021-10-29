@@ -1,17 +1,18 @@
 # Object-Relational Mapping (ORM): E-Commerce Back End
 This project is about creating an ecommerce website using back end technologies. 
-
+I don't know what to put here because I don't understand what it doessssss
 ## Getting Started
-
+ step one throw the computer out. done.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+## Needs photo here of some relevant code piece?
+
 ### Prerequisites
+Need to run in terminal :
+Npm install
+Npm mysql2
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
+Also needs insomnia
 
 ### Installing
 
@@ -29,9 +30,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 
 ## Built With
-
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [MySql]
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Deployed Link
@@ -51,10 +50,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## License
 
-This project is licensed under the MIT License 
+
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
