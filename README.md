@@ -1,11 +1,15 @@
 # Object-Relational Mapping (ORM): E-Commerce Back End
 This project is about creating an ecommerce website using back end technologies. 
 I don't know what to put here because I don't understand what it doessssss
+I hate this class. It makes me not want to pursue a career in programming.
+I'm supposed to write a summary of something I dont comprehend here. joy.
+reread the notes and edit this later. add something short and one dimensional like this is an ecommerce website in insomnia to do something of some sort?
+
 ## Getting Started
- step one throw the computer out. done.
+ step one throw the computer out. done. find a new career.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Needs photo here of some relevant code piece?
+## Needs photo here of some relevant code piece? What is a relevant code piece? 
 
 ### Prerequisites
 Need to run in terminal :
