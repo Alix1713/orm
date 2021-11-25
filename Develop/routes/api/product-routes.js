@@ -1,24 +1,24 @@
-const router = require('express').Router();
-const { Product, Category, Tag, ProductTag } = require('../../models');
+const router = require("express").Router();
+const { Product, Category, Tag, ProductTag } = require("../../models");
 
 // The `/api/products` endpoint
 
 // get all products
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const productData = await Product.findAll({
-      include: [{ model: Product }],
+      include: [{ all: true, nested: true }],
     });
     res.status(200).json(productData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-// find all products
-router.find('/', async (req, res) => {
+// get all products
+router.get("/", async (req, res) => {
   try {
     const productData = await Product.findAll({
-      include: [{ model: Product }],
+      include: [{ all: true, nested: true }],
     });
     res.status(200).json(productData);
   } catch (err) {
@@ -27,10 +27,10 @@ router.find('/', async (req, res) => {
 });
 // be sure to include its associated Category and Tag data
 // get one product
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const productData = await Product.findOne({
-      include: [{ model: Product }],
+      include: [{ all: true, nested: true }],
     });
     res.status(200).json(productData);
   } catch (err) {
@@ -40,14 +40,14 @@ router.get('/', async (req, res) => {
 
 // find a single product by its `id`
 // be sure to include its associated Category and Tag data
-router.get('/:id', async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id, {
-      include: [{ model: Product }, { model: Category }],
+      include: [{ all: true, nested: true }],
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'No Product found with that id!' });
+      res.status(404).json({ message: "No Product found with that id!" });
       return;
     }
 
@@ -58,17 +58,17 @@ router.get('/:id', async (req, res) => {
 });
 
 // create new product
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const productData = await Product.create({
-      product_id: req.body.product_id.price.stock.tagIDs
+      product_id: req.body.product_id.price.stock.tagIDs,
     });
     res.status(200).json(productData);
   } catch (err) {
     res.status(400).json(err);
   }
   // .then((product) => {
-  // if there's product tags, we need to create pairings to bulk create in the ProductTag model
+  // if there's product tags, we need to create pairings to bulk create in the ProductTag model */
   if (req.body.tagIds.length) {
     const productTagIdArr = req.body.tagIds.map((tag_id) => {
       return {
@@ -80,14 +80,14 @@ router.post('/', async (req, res) => {
   }
   // if no product tags, just respond
   res.status(200).json(product);
-})
-  .then((productTagIds) => res.status(200).json(productTagIds))
-  .catch((err) => {
-    console.log(err);
-    res.status(400).json(err);
-  });
+});
+// .then((productTagIds) => res.status(200).json(productTagIds))
+// .catch((err) => {
+//   console.log(err);
+//   res.status(400).json(err);
+// });
 // update product
-router.put('/:id', (req, res) => {
+router.put("/:id", (req, res) => {
   // update product data
   Product.update(req.body, {
     where: {
@@ -128,7 +128,7 @@ router.put('/:id', (req, res) => {
     });
 });
 // delete one product by its `id` value
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const productData = await Product.destroy({
       where: {
@@ -137,7 +137,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'No product found with that id!' });
+      res.status(404).json({ message: "No product found with that id!" });
       return;
     }
 
