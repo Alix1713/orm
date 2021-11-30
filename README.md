@@ -1,15 +1,11 @@
 # Object-Relational Mapping (ORM): E-Commerce Back End
 This project is about creating an ecommerce website using back end technologies. 
-I don't know what to put here because I don't understand what it doessssss
-I hate this class. It makes me not want to pursue a career in programming.
-I'm supposed to write a summary of something I dont comprehend here. joy.
-reread the notes and edit this later. add something short and one dimensional like this is an ecommerce website in insomnia to do something of some sort?
 
 ## Getting Started
- step one throw the computer out. done. find a new career.
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Run the server, open in insomnia to test.
 
-## Needs photo here of some relevant code piece? What is a relevant code piece? 
+## Code Snip
+![Code Snippet](snip.png)
 
 ### Prerequisites
 Need to run in terminal :
@@ -20,18 +16,16 @@ Also needs insomnia
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development environment running.
+Run the server in terminal
 
-Say what the step will be:
+Launch insomnia and go to http://localhost:3001/tags
 ```
-Give the example
+Enter in your first product
 ```
-And repeat
+Post one product at a time
 ```
-until finished
+use the get routes to view the products when added.
 ```
-End with an example of getting some data out of the system or using it for a little demo.
-
 
 ## Built With
 * [MySql]
@@ -39,11 +33,10 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Deployed Link
 
-* [See Live Site](#)
 * [GitHub Repo](https://github.com/Alix1713/orm)
 
 ## YouTube Demo 
-*[demo](#)
+*[demo](https://youtu.be/GzyR-JpCUEM)
 
 * **Alix Friedman** 
 
